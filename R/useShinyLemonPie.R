@@ -32,7 +32,7 @@
 #' You can call useShinyLemonPie() from anywhere inside the UI, as long as the final app UI contains the result of useShinyLemonPie()
 #' @importFrom htmltools htmlDependency
 #' @importFrom shiny tags
-#' @return Scripts that ShinyLemonPie requires that are automatically inserted to the app's <head> tag. A side effect of calling this function is that a ShinyLemonPie directory is added as a resource path using shiny::addResourcePath().
+#' @return Scripts that ShinyLemonPie requires that are automatically inserted to the app head tag. A side effect of calling this function is that a ShinyLemonPie directory is added as a resource path using shiny::addResourcePath().
 #' @export
 #'
 #' @examples
