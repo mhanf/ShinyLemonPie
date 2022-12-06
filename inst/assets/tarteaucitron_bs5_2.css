@@ -1,0 +1,97 @@
+
+
+/* paneau de gestion des cookies */
+#dialogTitle{
+  color: var(--bs-primary) !important;
+  background: var(--bs-body-bg) !important;
+}
+
+/* En autorisant ces services tiers, vous acceptez le ....*/
+#tarteaucitronInfo{
+  color: var(--bs-secondary) !important;
+  background: red !important;
+  border-color: var(--bs-secondary) !important;
+}
+/* Préférences pour tous les services*/
+.tarteaucitronH2{
+  color: var(--bs-body-color) !important;
+}
+
+/* bouton fermer*/
+#tarteaucitronClosePanel{
+ color: var(--bs-body-color) !important;
+ background: var(--bs-body-bg) !important;
+ border-color: var(--bs-body-bg) !important;
+}
+
+/* derniere ligne blanche*/
+#tarteaucitronServices{
+  border-color: var(--bs-body-bg) !important;
+  background: var(--bs-body-bg) !important;
+}
+
+/* petite bordure résiduelle*/
+#tarteaucitron #tarteaucitronServices .tarteaucitronMainLine {
+    background: var(--bs-body-bg) !important;
+    border: var(--bs-body-bg) !important;
+}
+
+/* button success */
+#tarteaucitronAllAllowed.tarteaucitronIsSelected {
+    background-color: var(--bs-success) !important;
+    opacity: 1 !important ;
+}
+
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine.tarteaucitronIsAllowed .tarteaucitronAllow,
+#tarteaucitron #tarteaucitronServices #tarteaucitronServices_mandatory .tarteaucitronLine button.tarteaucitronAllow {
+    background-color: var(--bs-success) !important;
+}
+
+/* button danger */
+#tarteaucitron #tarteaucitronServices #tarteaucitronAllDenied.tarteaucitronIsSelected,
+#tarteaucitron #tarteaucitronServices #tarteaucitronAllDenied2.tarteaucitronIsSelected {
+    background-color: var(--bs-danger) !important;
+    opacity: 1 !important;
+}
+
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine.tarteaucitronIsDenied .tarteaucitronDeny {
+    background-color: var(--bs-danger) !important;
+}
+
+/* bordures externes inférieures + fond partie inferieure*/
+.tarteaucitronBorder{
+  border: var(--bs-body-bg) !important;
+  background: var(--bs-body-bg) !important;
+}
+
+/* titre des sous parties */
+.tarteaucitronTitle button{
+  background: var(--bs-primary) !important;
+  color: var(--bs-body-bg) !important;
+}
+
+span.tarteaucitronPlus::before{
+  color: var(--bs-body-bg) !important;
+}
+
+.tarteaucitronTitle {
+  background: var(--bs-body-bg) !important;
+}
+
+#tarteaucitronServices .tarteaucitronLine {
+    background: var(--bs-body-bg) !important;
+    border-top: 0px solid var(--bs-primary) !important;
+}
+
+/* sous partie */
+
+.tarteaucitronH3, .tarteaucitronListCookies, .tacCurrentStatus, .tarteaucitronReadmoreInfo, .tarteaucitronReadmoreOfficial {
+    color: var(--bs-body-color) !important;
+}
+
+/* couleur du fond */
+
+#tarteaucitronRoot button#tarteaucitronBack {
+    background: var(--bs-body-color) !important;
+}
+
