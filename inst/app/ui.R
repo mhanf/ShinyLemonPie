@@ -1,6 +1,6 @@
 
 ui <- fluidPage(
-  theme = bslib::bs_theme(version = 5,bootswatch = "darkly"),
+  theme = bslib::bs_theme(version = 5,bootswatch = "flatly"),
 
   # tags$head(
   #   tags$link(rel = "stylesheet", type = "text/css", href = "tarteaucitron_bs5.css")
@@ -17,9 +17,9 @@ ui <- fluidPage(
     DenyAllCta = TRUE,
     AcceptAllCta = TRUE,
     highPrivacy = TRUE,
-    removeCredit = FALSE,
-    moreInfoLink = TRUE,
-    groupServices = TRUE,
+    removeCredit = TRUE,
+    moreInfoLink = FALSE,
+    groupServices = FALSE,
     handleBrowserDNTRequest = FALSE,
     adblocker = FALSE,
     mandatory = TRUE,
