@@ -31,7 +31,7 @@
   --g200: var(--bs-light); /* font interdiction video + initial dialog box*/
   --w: var(--bs-body-bg); /* couleur de fond panneau de gestion + ecriture bouton plein*/
   --g100-g800: orange;/* ??????? */
-  --focus: transparent;
+  --focus: var(--bs-secondary);
   --rm500: orange; /* ??????? */
   --overlay: rgba(156, 156, 156, 0.32); 
   --focus-z-index: 2000; 
@@ -113,7 +113,7 @@
 }
 
 #tarteaucitronRoot a[target="_blank"]::after {
-  content: "";
+  /*content: "";*/
   font-family: dsfr-tac-icons !important;
   font-style: normal;
   font-weight: normal !important;
@@ -419,7 +419,7 @@ body #tarteaucitronRoot div#tarteaucitronAlertBig {
 #tarteaucitron {
   display: none;
   height: 90%;
-  padding: 3rem 0 0;
+  padding: 2rem 0 0;
   margin: 0;
   left: 0;
   top: auto !important;
@@ -510,9 +510,9 @@ body #tarteaucitronRoot div#tarteaucitronAlertBig {
 #tarteaucitronRoot .tarteaucitronMainLine .tarteaucitronH1 {
   display: block;
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.8rem;
   color: var(--g700);
-  margin: 0 0 1rem;
+  margin: 0 0 0.3rem;
   font-weight: 700;
 }
 
@@ -1171,3 +1171,8 @@ outline: none;
 .tarteaucitron-toggle-group{
   color: var(--g700) !important;
 }
+
+#tarteaucitron {
+  overflow-y: scroll !important;
+}
+

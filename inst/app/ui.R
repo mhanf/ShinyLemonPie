@@ -17,9 +17,9 @@ ui <- fluidPage(
     DenyAllCta = TRUE,
     AcceptAllCta = TRUE,
     highPrivacy = TRUE,
-    removeCredit = TRUE,
-    moreInfoLink = FALSE,
-    groupServices = FALSE,
+    removeCredit = FALSE,
+    moreInfoLink = TRUE,
+    groupServices = TRUE,
     handleBrowserDNTRequest = FALSE,
     adblocker = FALSE,
     mandatory = TRUE,
@@ -41,10 +41,9 @@ ui <- fluidPage(
   ## piwik
   tags$head(
     tags$script(type="text/javascript",
-    'tarteaucitron.user.piwikProId = "dgdgdfgdfgdf";
+    'tarteaucitron.user.piwikProId = "secret-code";
   (tarteaucitron.job = tarteaucitron.job || []).push("piwikpro");'
     )),
-  
   
   # # ex youtube
   # tags$head(
