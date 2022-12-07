@@ -9,7 +9,7 @@ ui <- fluidPage(
   useShinyLemonPie(
     orientation = "bottom",
     showAlertSmall = FALSE,
-    cookieslist = TRUE,
+    cookieslist = FALSE,
     closePopup = TRUE,
     showIcon = TRUE,
     iconPosition = "BottomRight",
