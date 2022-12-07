@@ -247,7 +247,7 @@ body #tarteaucitronRoot div#tarteaucitronAlertBig {
   width: 100%;
   padding: 1rem;
   color: var(--g700) !important;
-  background: --w !important;
+  background: var(--w) !important;
   box-shadow: inset 0 0 0 1px var(--g400);
   z-index: 2147483645;
   max-height: 73vh;
@@ -1142,11 +1142,11 @@ outline: none;
 #tarteaucitronRoot .tarteaucitronAllow:not(.tarteaucitronCTAButton) {
   background: var(--bf500);
   color: var(--w);
-  padding: 0.5rem 1.5rem;
+  padding: 0rem 1.5rem;
   line-height: 1.5rem;
   min-height: 2.5rem;
   font-size: inherit;
-  margin: 0 .5rem !important;
+  margin: 0.2rem !important;
 }
 
 #tarteaucitronRoot .tarteaucitronDeny:not(.tarteaucitronCTAButton){
@@ -1156,7 +1156,7 @@ outline: none;
   line-height: 1.5rem;
   min-height: 2.5rem;
   font-size: inherit;
-  margin: 0 .5rem !important;
+  margin: 0.2rem !important;
 }
 
 

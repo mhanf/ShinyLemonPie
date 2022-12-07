@@ -247,6 +247,7 @@ useShinyLemonPie <- function(orientation = "bottom",
       package = "ShinyLemonPie",
       src = "assets",
       stylesheet = c(file = "tarteaucitron_theme_fr_dev.css")
+      #stylesheet = c(file = "tarteaucitron_bs5_final.css")
     )
   }
 
