@@ -328,10 +328,11 @@ body #tarteaucitronRoot div#tarteaucitronAlertBig {
   content: "Fermer";
   position: absolute;
   left: .75rem;
+  border-radius: 1rem;
+  
 }
 
 #tarteaucitronRoot #tarteaucitronCloseCross:after {
-  font-family: dsfr-tac-icons !important;
   font-style: normal;
   font-weight: normal !important;
   font-variant: normal;
@@ -1179,4 +1180,9 @@ outline: none;
 #tarteaucitron {
   overflow-y: scroll !important;
 }
+
+#tarteaucitronRoot #tarteaucitronCloseCross:hover {
+  cursor: pointer !important;
+}
+
 

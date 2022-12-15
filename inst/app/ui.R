@@ -33,7 +33,7 @@ ui <- fluidPage(
     readmoreLink = "",
     useExternalCss = FALSE,
     useExternalJs = FALSE,
-    useBS5Css = TRUE,
+    useBS5Css = FALSE,
   ),
 
   
