@@ -1178,11 +1178,24 @@ outline: none;
 }
 
 #tarteaucitron {
-  overflow-y: scroll !important;
+  /*overflow-y: scroll !important;*/
 }
 
 #tarteaucitronRoot #tarteaucitronCloseCross:hover {
   cursor: pointer !important;
 }
 
+.tarteaucitronAsk {
+  display: block !important;
+  margin-top: 15px !important;
+  text-align: right !important;
+}
 
+.tarteaucitronBorder > ul > li {
+    padding: 1rem 0 !important;
+}
+
+#tarteaucitronClosePanel{
+  background-color: var(--bs-body-bg) !important;
+  z-index: 5000000 !important;
+}

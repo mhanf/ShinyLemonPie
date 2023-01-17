@@ -2,10 +2,7 @@
 ui <- fluidPage(
   theme = bslib::bs_theme(version = 5,bootswatch = "flatly"),
 
-  # tags$head(
-  #   tags$link(rel = "stylesheet", type = "text/css", href = "tarteaucitron_bs5.css")
-  # ),
-
+  # to include at the beginning of the ui part
   useShinyLemonPie(
     orientation = "bottom",
     showAlertSmall = FALSE,
@@ -23,7 +20,7 @@ ui <- fluidPage(
     handleBrowserDNTRequest = FALSE,
     adblocker = FALSE,
     mandatory = TRUE,
-    mandatoryCta = TRUE,
+    mandatoryCta = FALSE,
     hashtag = "#tarteaucitron",
     cookieName = "tarteaucitron",
     serviceDefaultState = "wait",
@@ -33,19 +30,17 @@ ui <- fluidPage(
     readmoreLink = "",
     useExternalCss = FALSE,
     useExternalJs = FALSE,
-    useBS5Css = FALSE,
+    useBS5Css = TRUE,
   ),
 
-  
-  
   ## piwik
   tags$head(
     tags$script(type="text/javascript",
     'tarteaucitron.user.piwikProId = "secret-code";
   (tarteaucitron.job = tarteaucitron.job || []).push("piwikpro");'
-    )),
+    ))#,
   
-  # # ex youtube
+  # # # ex youtube
   # tags$head(
   #   tags$script(type = "text/javascript",
   #               '(tarteaucitron.job = tarteaucitron.job || []).push("youtube");'
