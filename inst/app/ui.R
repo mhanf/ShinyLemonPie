@@ -1,7 +1,17 @@
 
-ui <- fluidPage(
-  theme = bslib::bs_theme(version = 5,bootswatch = "flatly"),
+library(bslib)
 
+ui <- fluidPage(
+  theme = bslib::bs_theme(
+    version = 5,
+    base_font = font_google("Roboto"),
+    primary = "#16427B",
+    secondary = "#94C11F",
+    light = "#B64493",
+    dark = "#B64493"
+    ),
+  
+  h1("Bienvenue sur mon site"),
   # to include at the beginning of the ui part
   useShinyLemonPie(
     orientation = "bottom",

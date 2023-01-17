@@ -20,14 +20,14 @@
 }
 
 :root {
-  --bf500: var(--bs-primary);
+  --bf500: var(--bs-primary);/*primary*/
   --w-bf500: var(--bs-body-bg);
   --t-plain: transparent;
   --g800: var(--bs-body-color); /* titre cookies necessaire + titre categorie cookie */
   --g700: var(--bs-body-color); /* couleur ecriture par default */
   --g600: orange; /* ??????? */
-  --g400: var(--bs-primary); /* contour boite dialogue intro */
-  --g300: var(--bs-primary); /*trait de separation panneau de gestion*/
+  --g400: var(--bs-primary); /*primary*//* contour boite dialogue intro */
+  --g300: var(--bs-primary); /*primary*//*trait de separation panneau de gestion*/
   --g200: var(--bs-light); /* font interdiction video + initial dialog box*/
   --w: var(--bs-body-bg); /* couleur de fond panneau de gestion + ecriture bouton plein*/
   --g100-g800: orange;/* ??????? */
@@ -49,7 +49,7 @@
 #tarteaucitronRoot {
   box-sizing: border-box;
   color: var(--g700);
-  font-family: --bs-body-font-family;
+  font-family: var(--bs-body-font-family);
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
