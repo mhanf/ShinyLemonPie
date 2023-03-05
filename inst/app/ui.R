@@ -4,15 +4,12 @@ library(bslib)
 ui <- fluidPage(
   theme = bslib::bs_theme(
     version = 5,
-    base_font = font_google("Roboto"),
-    primary = "#16427B",
-    secondary = "#94C11F",
-    light = "#B64493",
-    dark = "#B64493"
+    bootswatch = "flatly"
   ),
-  h1("Bienvenue sur mon site"),
+  h1("Welcome !"),
   # to include at the beginning of the ui part
   useShinyLemonPie(
+    lang="en",
     orientation = "bottom",
     showAlertSmall = FALSE,
     cookieslist = FALSE,
@@ -49,34 +46,34 @@ ui <- fluidPage(
       'tarteaucitron.user.piwikProId = "secret-code";
   (tarteaucitron.job = tarteaucitron.job || []).push("piwikpro");'
     )
-  ) # ,
+  ),
 
-  # # # ex youtube
-  # tags$head(
-  #   tags$script(type = "text/javascript",
-  #               '(tarteaucitron.job = tarteaucitron.job || []).push("youtube");'
-  #   )
-  # ),
-  #
-  #
-  # div(
-  #   class="youtube_player no-border",
-  #   videoID="LIErnfGITSQ",
-  #   width="560",
-  #   height="315",
-  #   theme="light",
-  #   rel="0",
-  #   controls="1",
-  #   showinfo="1",
-  #   autoplay="0",
-  #   mute="0",
-  #   loop="1",
-  #   loading="1",
-  #   marginwidth="0" ,
-  #   marginheight="0",
-  #   hspace="0",
-  #   vspace="0",
-  #   frameBorder="0",
-  #   scrolling="no"
-  # )
+  # # ex youtube
+  tags$head(
+    tags$script(type = "text/javascript",
+                '(tarteaucitron.job = tarteaucitron.job || []).push("youtube");'
+    )
+  ),
+
+
+  div(
+    class="youtube_player no-border",
+    videoID="LIErnfGITSQ",
+    width="560",
+    height="315",
+    theme="light",
+    rel="0",
+    controls="1",
+    showinfo="1",
+    autoplay="0",
+    mute="0",
+    loop="1",
+    loading="1",
+    marginwidth="0" ,
+    marginheight="0",
+    hspace="0",
+    vspace="0",
+    frameBorder="0",
+    scrolling="no"
+  )
 )
