@@ -1,0 +1,13 @@
+name: apptest
+title: apptest
+username:
+account: mhanf
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7836766
+bundleId: 6743991
+url: https://mhanf.shinyapps.io/apptest/
+when: 1673975659.03398
+lastSyncTime: 1673975659.03398
+asMultiple: FALSE
+asStatic: FALSE

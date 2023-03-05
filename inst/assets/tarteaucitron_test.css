@@ -1,0 +1,49 @@
+/* Modification de la couleur de fond */
+body {
+  background-color: #ffffff;
+}
+
+/* Modification de la couleur des titres */
+h1, h2, h3 {
+  color: #006699;
+}
+
+/* Modification de la police */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Ajout d'une bordure autour du conteneur principal */
+#tarteaucitronRoot {
+  border: 1px solid #cccccc;
+}
+
+/* Modification de la couleur de fond du bouton "Accepter tous" */
+#tarteaucitronServices .tarteaucitronAllowAll {
+  background-color: #006699;
+}
+
+/* Modification de la couleur de la police du bouton "Accepter tous" */
+#tarteaucitronServices .tarteaucitronAllowAll {
+  color: #ffffff;
+}
+
+/* Modification de la couleur de fond des boutons "Accepter" et "Refuser" */
+#tarteaucitronServices .tarteaucitronAllow, #tarteaucitronServices .tarteaucitronDeny {
+  background-color: #cccccc;
+}
+
+/* Modification de la couleur de la police des boutons "Accepter" et "Refuser" */
+#tarteaucitronServices .tarteaucitronAllow, #tarteaucitronServices .tarteaucitronDeny {
+  color: #000000;
+}
+
+/* Modification de la couleur de fond du panneau latéral */
+#tarteaucitronServices .tarteaucitronPanel {
+  background-color: #f2f2f2;
+}
+
+/* Modification de la couleur de la police du panneau latéral */
+#tarteaucitronServices .tarteaucitronPanel {
+  color: #000000;
+}

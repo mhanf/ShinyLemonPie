@@ -9,8 +9,7 @@ ui <- fluidPage(
     secondary = "#94C11F",
     light = "#B64493",
     dark = "#B64493"
-    ),
-  
+  ),
   h1("Bienvenue sur mon site"),
   # to include at the beginning of the ui part
   useShinyLemonPie(
@@ -20,7 +19,7 @@ ui <- fluidPage(
     closePopup = TRUE,
     showIcon = TRUE,
     iconPosition = "BottomRight",
-    #iconSrc = "cookie.png",
+    # iconSrc = "cookie.png",
     DenyAllCta = TRUE,
     AcceptAllCta = TRUE,
     highPrivacy = TRUE,
@@ -45,19 +44,21 @@ ui <- fluidPage(
 
   ## piwik
   tags$head(
-    tags$script(type="text/javascript",
-    'tarteaucitron.user.piwikProId = "secret-code";
+    tags$script(
+      type = "text/javascript",
+      'tarteaucitron.user.piwikProId = "secret-code";
   (tarteaucitron.job = tarteaucitron.job || []).push("piwikpro");'
-    ))#,
-  
+    )
+  ) # ,
+
   # # # ex youtube
   # tags$head(
   #   tags$script(type = "text/javascript",
   #               '(tarteaucitron.job = tarteaucitron.job || []).push("youtube");'
   #   )
   # ),
-  # 
-  # 
+  #
+  #
   # div(
   #   class="youtube_player no-border",
   #   videoID="LIErnfGITSQ",

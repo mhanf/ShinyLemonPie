@@ -27,6 +27,14 @@
 #' @param useExternalCss logical. If false, the tarteaucitron.css file will be loaded
 #' @param useExternalJs logical. If false, the tarteaucitron.js file will be loaded
 #' @param useBS5Css logical. If true, a css theme compatible with BS5 is loaded.
+#' @param lang Language attribute for the ShinyLemonPie input. Available values
+#' are "ar","bg", "ca", "cn","cs", "da", "de", "el", "en", "es", "et", "fi", "fr",
+#' "hu", "it", "ja", "lt", "lv", "nl", "no", "oc, "pl", "pt", "ro", "ru", "se",
+#' "sk", "sv", "tr", "uk", "vi", "zh" for
+#' Arabic, Bulgarian, Catalan, Chinese, Czech, Danish, German, Greek, English,
+#' Spanish, Estonian, Finnish, French, Hungarian, Italian, Japanese, Lithuanian, 
+#' Latvian, Dutch, Norwegian, Occitan, Polish, Portuguese, Romanian & Moldavian,
+#' Russian, Northern Sami, Slovak, Swedish, Turkish, Ukrainian, Vietnamese and Chinese respectively.
 #'
 #' @description This function must be called from a Shiny app's UI in order for all other ShinyLemonPie functions to work.
 #' You can call useShinyLemonPie() from anywhere inside the UI, as long as the final app UI contains the result of useShinyLemonPie()
@@ -37,6 +45,7 @@
 #'
 #' @examples
 #' useShinyLemonPie(
+#'   lang = "en",
 #'   orientation = "bottom",
 #'   showAlertSmall = FALSE,
 #'   cookieslist = FALSE,
@@ -66,7 +75,8 @@
 #'   useBS5Css = FALSE
 #' )
 #'
-useShinyLemonPie <- function(orientation = "bottom",
+useShinyLemonPie <- function(lang = "cn",
+                             orientation = "bottom",
                              showAlertSmall = FALSE,
                              cookieslist = FALSE,
                              closePopup = FALSE,
@@ -94,6 +104,15 @@ useShinyLemonPie <- function(orientation = "bottom",
                              useExternalJs = FALSE,
                              useBS5Css = FALSE) {
   # test
+  match.arg(
+    arg = lang,
+    choices = c(
+      "ar", "bg", "ca", "cn", "cs", "da", "de", "el", "en", "es", "et", "fi", "fr",
+      "hu", "it", "ja", "lt", "lv", "nl", "no", "oc", "pl", "pt", "ro", "ru", "se",
+      "sk", "sv", "tr", "uk", "vi", "zh"
+    ),
+    several.ok = FALSE
+  )
   match.arg(
     arg = orientation,
     choices = c("top", "middle", "bottom"),
@@ -160,7 +179,8 @@ useShinyLemonPie <- function(orientation = "bottom",
   if (useBS5Css == TRUE) {
     useExternalCss <- "true"
   }
-
+  # langue dependency
+  dep_js0 <- sprintf("var tarteaucitronForceLanguage = '%s'", lang)
   # tarteaucitron js dependency
   dep_js1 <- htmltools::htmlDependency(
     name = "ShinyLemonPie",
@@ -228,16 +248,6 @@ useShinyLemonPie <- function(orientation = "bottom",
     useExternalCss,
     useExternalJs
   )
-  # tarteaucitron js dependency
-  dep_js3 <- htmltools::htmlDependency(
-    name = "ShinyLemonPie",
-    version = "1.9.7",
-    package = "ShinyLemonPie",
-    src = "assets",
-    script = "tarteaucitron/tarteaucitron.js"
-  )
-
-
   # BS5 dependency
   bs5_dep <- NULL
   if (useBS5Css == TRUE) {
@@ -247,7 +257,7 @@ useShinyLemonPie <- function(orientation = "bottom",
       package = "ShinyLemonPie",
       src = "assets",
       stylesheet = c(file = "tarteaucitron_theme_fr_dev.css")
-      #stylesheet = c(file = "tarteaucitron_bs5_final.css")
+      # stylesheet = c(file = "tarteaucitron_bs5_final.css")
     )
   }
 
@@ -255,12 +265,17 @@ useShinyLemonPie <- function(orientation = "bottom",
   tag <- tags$head(
     # BS5 dependency
     bs5_dep,
-    # dependency1
+    # dependency 0
+    tags$script(
+      type = "text/javascript",
+      dep_js0
+    ),
+    # dependency 1
     tags$script(
       type = "text/javascript",
       dep_js1
     ),
-    # dependency2
+    # dependency 2
     tags$script(
       type = "text/javascript",
       dep_js2

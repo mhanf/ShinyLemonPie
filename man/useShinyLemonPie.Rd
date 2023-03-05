@@ -5,6 +5,7 @@
 \title{Set up a Shiny app to use tarteaucitron}
 \usage{
 useShinyLemonPie(
+  lang = "cn",
   orientation = "bottom",
   showAlertSmall = FALSE,
   cookieslist = FALSE,
@@ -35,6 +36,15 @@ useShinyLemonPie(
 )
 }
 \arguments{
+\item{lang}{Language attribute for the ShinyLemonPie input. Available values
+are "ar","bg", "ca", "cn","cs", "da", "de", "el", "en", "es", "et", "fi", "fr",
+"hu", "it", "ja", "lt", "lv", "nl", "no", "oc, "pl", "pt", "ro", "ru", "se",
+"sk", "sv", "tr", "uk", "vi", "zh" for
+Arabic, Bulgarian, Catalan, Chinese, Czech, Danish, German, Greek, English,
+Spanish, Estonian, Finnish, French, Hungarian, Italian, Japanese, Lithuanian,
+Latvian, Dutch, Norwegian, Occitan, Polish, Portuguese, Romanian & Moldavian,
+Russian, Northern Sami, Slovak, Swedish, Turkish, Ukrainian, Vietnamese and Chinese respectively.}
+
 \item{orientation}{Banner position (top, bottom and middle)}
 
 \item{showAlertSmall}{logical. Show the small banner on bottom right (FALSE or TRUE)}
@@ -98,6 +108,7 @@ You can call useShinyLemonPie() from anywhere inside the UI, as long as the fina
 }
 \examples{
 useShinyLemonPie(
+  lang = "en",
   orientation = "bottom",
   showAlertSmall = FALSE,
   cookieslist = FALSE,
